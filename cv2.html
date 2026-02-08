@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Sina Mahdi Sitanggang</title>
+
+<style>
+:root {
+  --primary: #007bff;
+  --bg: #f4f4f4;
+  --card: #ffffff;
+  --text: #333;
+}
+
+body.dark {
+  --primary: #17a2b8;
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #eaeaea;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-left p {
+  margin: 5px 0;
+  color: gray;
+}
+
+.header-right button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+section {
+  margin-top: 30px;
+}
+
+h2 {
+  border-left: 5px solid var(--primary);
+  padding-left: 10px;
+}
+
+.timeline, .projects {
+  margin-top: 15px;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skill span {
+  font-size: 14px;
+}
+
+.progress {
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 8px;
+  background: var(--primary);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: gray;
+}
+
+@media print {
+  .header-right {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-left">
+      <h1>Sina Mahdi Sitanggang</h1>
+      <p>Mahasiswa Teknologi Informasi | Web & IoT Enthusiast</p>
+      <p>Email: sinamahdi07@gmail.com | WA: 081260696154</p>
+    </div>
+    <div class="header-right">
+      <button onclick="toggleTheme()">🌙 Dark Mode</button>
+      <button onclick="downloadPDF()">⬇ Download PDF</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>Profil</h2>
+    <p>
+      Saya adalah mahasiswa Teknologi Informasi yang memiliki minat pada
+      pengembangan web dan Internet of Things (IoT). Terbiasa mengerjakan
+      proyek mandiri dan terus belajar teknologi baru.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pendidikan</h2>
+    <div class="timeline">
+      <div class="item">
+        <strong>S1 Teknologi Informasi</strong><br>
+        Fakultas Fasilkom-Ti
+        Universitas Sumatera Utara (2025 – Sekarang)
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pengalaman</h2>
+    <div class="timeline">
+      <div class="item">
+        <strong>Proyek IoT Monitoring</strong><br>
+        ESP8266, Sensor DHT, Blynk
+      </div>
+      <div class="item">
+        <strong>Web CV & Landing Page</strong><br>
+        HTML, CSS, JavaScript
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Keahlian</h2>
+    <div class="skills">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress"><div style="width:90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress"><div style="width:85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div style="width:75%"></div></div>
+      </div>
+      <div class="skill">
+        <span>ESP8266 / IoT</span>
+        <div class="progress"><div style="width:70%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div class="item">
+        <strong>Smart Home Monitoring</strong> – Kontrol suhu & AC berbasis ESP8266
+      </div>
+      <div class="item">
+        <strong>CV Online</strong> – Website CV responsif
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Sina Mahdi Sitanggang
+  </footer>
+</div>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+function downloadPDF() {
+  window.print();
+}
+</script>
+
+</body>
+</html>
